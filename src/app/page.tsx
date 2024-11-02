@@ -24,10 +24,16 @@ export default function Home() {
     if (answer !== null) {
       const resultValue = Number(answer) === a * b;
       if (resultValue) {
-        player.caps += 5;
+        setPlayer((prevPlayer) => ({
+          ...prevPlayer,
+          xp: prevPlayer.xp + 5,
+        }));
         setResult(`Congrats! You gained 5 caps, caps are now ${player.caps}`);
       } else {
-        player.hp -= 5;
+        setPlayer((prevPlayer) => ({
+          ...prevPlayer,
+          hp: prevPlayer.hp - 5,
+        }));
         setResult(`No! Result is ${a * b}! You took 5 damage, HP is ${player.hp}`);
       }
     } else {
