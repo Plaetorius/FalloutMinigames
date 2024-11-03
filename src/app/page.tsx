@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
 import { Player } from "@/types/PlayerType";
+import { fetchPlayerByID } from "@/services/playerService";
 
 
 export default function Home() {
@@ -16,6 +17,18 @@ export default function Home() {
     xp: 5,
     caps: 0,
   });
+
+  async function showPlayerStats() {
+    const id = "08907422-7177-42c9-b5cc-3b2141117651";
+
+    try {
+      const fetchedPlayer = await fetchPlayerByID(id);
+
+      setPlayer(fetchedPlayer);
+    } catch (error) {
+      console.error("Error showing player stats:", error);
+    }
+  }
 
   function fight() {
     const a : number = Math.round(Math.random() * 20);
@@ -60,6 +73,17 @@ export default function Home() {
         </div>
 
         <p>{result}</p>
+        <div>
+          <button className="bg-green-500 p-5" onClick={ showPlayerStats }>
+            Stats
+          </button>
+        </div>
+        <div>
+          <h3>{player.name}</h3>
+          <p>HP: {player.hp}</p>
+          <p>XP: {player.xp}</p>
+          <p>Caps: {player.caps}</p>
+        </div>
       </main>
       <footer>
        
