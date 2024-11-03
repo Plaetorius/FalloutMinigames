@@ -1,2 +1,3 @@
-# Fallout-Marketplace
-First Next.js project. Creating a Minigames in the Fallout universe using Next.js
+# Fallout Minigames
+First Next.js project. Creating minigames on the Fallout universe using Next.js
+

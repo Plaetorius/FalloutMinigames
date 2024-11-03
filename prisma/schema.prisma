@@ -11,8 +11,8 @@ datasource db {
 model Player {
   id        String @id @default(uuid())
   name      String
-  hp        Int
-  xp        Int
-  caps      Int
+  hp        Int @default(10)
+  xp        Int @default(0)
+  caps      Int @default(0)
   createdAt DateTime @default(now())
 }
