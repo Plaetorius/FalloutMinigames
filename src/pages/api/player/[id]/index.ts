@@ -25,6 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 				res.status(404).json({ error: "No player with given ID" });
 			}
 		} catch (error) {
+			console.log("Error retrieving player");
 			res.status(500).json({ error: "Failed to fetch player" });
 		}
 	} else if (req.method === "PUT") {

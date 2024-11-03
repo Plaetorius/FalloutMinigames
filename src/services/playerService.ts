@@ -9,7 +9,22 @@ export async function fetchPlayerByID(id: string) {
 		const player = await response.json();
 		return player;
 	} catch (error) {
-		console.error("Error fetching player:", error);
+		console.log("Error fetching player:", error);
+		throw error;
+	}
+}
+
+export async function fetchPlayerByName(name: string) {
+	try {
+		const response = await fetch(`/api/player?name=${encodeURIComponent(name)}`);
+		if (!response.ok) {
+			throw new Error("No player found!");
+		} else {
+			const player = await response.json();
+			return player;
+		} 
+	} catch (error) {
+		console.log("Error fetching player:", error);
 		throw error;
 	}
 }

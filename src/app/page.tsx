@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
 import { Player } from "@/types/PlayerType";
-import { fetchPlayerByID } from "@/services/playerService";
+import { fetchPlayerByID, fetchPlayerByName } from "@/services/playerService";
 
 
 export default function Home() {
@@ -20,13 +20,17 @@ export default function Home() {
 
   async function showPlayerStats() {
     const id = "08907422-7177-42c9-b5cc-3b2141117651";
+    const name = "Player1";
 
     try {
       const fetchedPlayer = await fetchPlayerByID(id);
+      const namePlayer = await fetchPlayerByName(name);
+
+      console.log(namePlayer);
 
       setPlayer(fetchedPlayer);
     } catch (error) {
-      console.error("Error showing player stats:", error);
+      console.log("Error showing player stats:", error);
     }
   }
 
@@ -76,6 +80,11 @@ export default function Home() {
         <div>
           <button className="bg-green-500 p-5" onClick={ showPlayerStats }>
             Stats
+          </button>
+        </div>
+        <div>
+          <button className="text-black bg-blue-100 p-5" onClick={ showPlayerStats }>
+            Get by name
           </button>
         </div>
         <div>
