@@ -3,16 +3,16 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL")
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model Player {
-  id        String @id @default(uuid())
-  name      String @unique
-  hp        Int @default(10)
-  xp        Int @default(0)
-  caps      Int @default(0)
+  id        String   @id @default(uuid())
+  name      String   @unique
+  hp        Int      @default(10)
+  xp        Int      @default(0)
+  caps      Int      @default(0)
   createdAt DateTime @default(now())
 }

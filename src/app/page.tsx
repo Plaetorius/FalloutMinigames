@@ -19,18 +19,16 @@ export default function Home() {
   });
 
   async function showPlayerStats() {
-    const id = "08907422-7177-42c9-b5cc-3b2141117651";
+    const id = "7275ab10-83ce-440d-b417-958cf1465c13";
     const name = "Player1";
 
     try {
       const fetchedPlayer = await fetchPlayerByID(id);
       const namePlayer = await fetchPlayerByName(name);
 
-      console.log(namePlayer);
-
       setPlayer(fetchedPlayer);
     } catch (error) {
-      console.log("Error showing player stats:", error);
+      console.error("Error showing player stats:", error);
     }
   }
 

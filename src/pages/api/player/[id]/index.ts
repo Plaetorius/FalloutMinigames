@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 /*
-08907422-7177-42c9-b5cc-3b2141117651
+7275ab10-83ce-440d-b417-958cf1465c13
 */
 
 const prisma = new PrismaClient();
@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 				res.status(404).json({ error: "No player with given ID" });
 			}
 		} catch (error) {
-			console.log("Error retrieving player");
+			console.error("Error retrieving player");
 			res.status(500).json({ error: "Failed to fetch player" });
 		}
 	} else if (req.method === "PUT") {
@@ -43,7 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			});
 			res.status(200).json(player);
 		} catch (error) {
-			console.log("Error updating player");
+			console.error("Error updating player");
 			res.status(500).json({ error: "Error updating player" });
 		}
 	} else if (req.method === "DELETE") {
@@ -54,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			
 			res.status(204).end(); 
 		} catch (error) {
-			console.log("Error deleting player");
+			console.error("Error deleting player");
 			res.status(500).json({ error: "Error deleting player" });
 		}
 	} else {

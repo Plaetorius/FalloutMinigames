@@ -14,11 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
       res.status(201).json(player);
     } catch (error) {
-      console.log(`Error creating player: ${error}`);
+      console.error(`Error creating player: ${error}`);
       res.status(500).json({ error: "Failed to create player" });
     }
   } else if (req.method === "GET") {
-    const { name } : { name: string } = req.query;
+    const { name } = req.query;
 
     if (!name || typeof name !== "string") {
       res.status(400).json({ error: "Valid player name required"})
