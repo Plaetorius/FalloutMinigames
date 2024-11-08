@@ -11,8 +11,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        falloutgreen: "#00EE00",
+        pyellow: "#FBAB20",
+        phyellow: "#FFD07E",
+        pdarkblue: "#3E446E",
+        pbrown: "#5E4949",
       },
+      fontFamily: {
+        AdvertisingScript: ['Advertising Script', 'sans-serif'],
+        KLINOM: ['KLINOM', 'sans-serif'],
+      }
     },
   },
   plugins: [],

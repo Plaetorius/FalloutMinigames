@@ -1,0 +1,4 @@
+.text-stroke-1 {
+	-webkit-text-stroke: 0.5rem white;
+	paint-order: stroke fill;
+}

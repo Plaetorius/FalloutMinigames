@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import { PlayerProvider } from "@/context/PlayerContext";
+import "@/styles/border.css"
+import "@/styles/text.css"
+import "@/styles/font.css"
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +20,9 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        {children}
+        <PlayerProvider>
+          {children}
+        </PlayerProvider>
       </body>
     </html>
   );

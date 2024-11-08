@@ -14,8 +14,26 @@
   }
 }
 
+@font-face {
+  font-family: 'KLINOM';
+  src: url('/fonts/KLINOM.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Advertising Script';
+  src: url('/fonts/Advertising Script.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  font-family: 'Klinom', 'sans-serif';
 }
