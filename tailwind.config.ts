@@ -19,7 +19,10 @@ const config: Config = {
       fontFamily: {
         AdvertisingScript: ['Advertising Script', 'sans-serif'],
         KLINOM: ['KLINOM', 'sans-serif'],
-      }
+      },
+      animation: {
+        'spin-slow': 'spin 15s linear infinite',
+      },
     },
   },
   plugins: [],

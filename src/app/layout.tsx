@@ -5,6 +5,8 @@ import "@/styles/text.css"
 import "@/styles/font.css"
 import "./globals.css";
 
+// TODO add back turbopack in the dev
+
 export const metadata: Metadata = {
   title: "Fallout Minigames",
   description: "Fallout Minigames (not affiliated).",

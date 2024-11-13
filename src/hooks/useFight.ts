@@ -14,13 +14,14 @@ export default function useFight() {
 
 		const a : number = Math.round(Math.random() * 20);
 		const b : number = Math.round(Math.random() * 20);
+		const capsReward: number = Math.round(Math.random() * 8)
 		const answer = await promptUser(`What's ${a} × ${b}?`);
 		if (answer !== null) {
 			const isCorrect = Number(answer) === a * b;
 			
 			if (isCorrect) {
-				addCaps(5);
-				setResult(`Congrats! You gained 5 caps, caps are now ${player.caps}`);
+				addCaps(capsReward);
+				setResult(`Congrats! You gained ${capsReward} caps, caps are now ${player.caps + capsReward}`);
 			} else {
 				addHP(-5);
 				setResult(`Incorrect answer! Correct result was ${a * b}`);
