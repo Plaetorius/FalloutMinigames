@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React from "react";
 import { usePlayer } from "@/context/PlayerContext";
-import { fetchPlayerByID, fetchPlayerByName } from "@/services/playerService";
 import useFight from "@/hooks/useFight";
 
 export default function Home() {

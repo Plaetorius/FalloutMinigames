@@ -1,17 +1,10 @@
 'use client';
 
-import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import React, { createContext, useContext, useState, ReactNode } from "react";
-import { usePlayer } from "@/context/PlayerContext";
-import { fetchPlayerByID, fetchPlayerByName } from "@/services/playerService";
-import useFight from "@/hooks/useFight";
+import React from "react";
+
 import GameCard from "@/components/GameCard";
 
 export default function Home() {
-  const { player } = usePlayer();
-  const { result, startFight } = useFight();
-
 	return (
 		<div className="w-full h-screen bg-white">
 			<header className="w-full h-96 text-[200px] flex justify-center items-center sticky top-0 z-0 text-pyellow">

@@ -1,10 +1,10 @@
 import { usePlayer } from "@/context/PlayerContext";
 import { useState } from "react";
 
-interface useFightReturn {
-	result: string;
-	startFight: () => Promise<void>;
-}
+// interface useFightReturn {
+// 	result: string;
+// 	startFight: () => Promise<void>;
+// }
 
 export default function useFight() {
 	const { player, addHP, addCaps } = usePlayer();

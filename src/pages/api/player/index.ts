@@ -24,20 +24,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(400).json({ error: "Valid player name required"})
     }
 
-    try {
-      const player = await prisma.player.findUnique({
-        where: { name },
-      });
+  // FIXME can't build 
+  //   try {
+  //     const player = await prisma.player.findUnique({
+  //       where: { name },
+  //     });
 
-      if (!player) {
-        res.status(404).json({ error: "Player not found" });
-      } else {
-        res.status(200).json(player);
-      }
-    } catch (error) {
-      console.error(`Error retrieving player: ${error}`);
-      res.status(500).json({ error: "Failed to retrieve player" });
-    }
+  //     if (!player) {
+  //       res.status(404).json({ error: "Player not found" });
+  //     } else {
+  //       res.status(200).json(player);
+  //     }
+  //   } catch (error) {
+  //     console.error(`Error retrieving player: ${error}`);
+  //     res.status(500).json({ error: "Failed to retrieve player" });
+  //   }
   } else { 
     res.setHeader("Allow", ["POST", "GET"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);

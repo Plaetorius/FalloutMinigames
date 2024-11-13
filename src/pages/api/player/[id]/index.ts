@@ -26,7 +26,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			}
 		} catch (error) {
 			console.error("Error retrieving player");
-			res.status(500).json({ error: "Failed to fetch player" });
+
+			if (error instanceof Error) {
+				res.status(500).json({ error: error.message });
+			} else {
+				res.status(500).json({ error: "An unknown error occurred" });
+			}	
 		}
 	} else if (req.method === "PUT") {
 		const { name, hp, xp, caps } = req.body;
@@ -43,8 +48,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			});
 			res.status(200).json(player);
 		} catch (error) {
-			console.error("Error updating player");
-			res.status(500).json({ error: "Error updating player" });
+			console.error("Error retrieving player");
+		
+			if (error instanceof Error) {
+				res.status(500).json({ error: error.message });
+			} else {
+				res.status(500).json({ error: "An unknown error occurred" });
+			}
 		}
 	} else if (req.method === "DELETE") {
 		try {
@@ -54,8 +64,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			
 			res.status(204).end(); 
 		} catch (error) {
-			console.error("Error deleting player");
-			res.status(500).json({ error: "Error deleting player" });
+			console.error("Error retrieving player");
+
+			if (error instanceof Error) {
+				res.status(500).json({ error: error.message });
+			} else {
+				res.status(500).json({ error: "An unknown error occurred" });
+			}
 		}
 	} else {
 		res.setHeader("Allow", ["GET", "PUT", "DELETE"]);
