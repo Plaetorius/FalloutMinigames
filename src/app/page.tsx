@@ -15,7 +15,7 @@ export default function Home() {
 			<main>
 				<div className="main-wrapper w-full h-screen bg-pyellow relative z-10 border-pyellow box-border m-0 p-0">
 					<div className="main-content w-full h-full bg-pdarkblue relative z-10 border-pdarkblue box-border m-auto p-auto">
-						<GameCard title="Calculus" description="Ready to mathematically challenge yourself, Fallout fashion?" link="calculus"/>
+						<GameCard title="Calculus" description="Ready to mathematically challenge yourself, Fallout fashion?" link="games/calculus"/>
 					</div>
 				</div>
 			</main>

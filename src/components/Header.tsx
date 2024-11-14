@@ -7,9 +7,7 @@ import StarburstImage from "@/components/StarburstImage";
 export default function Header() {
 	const pathname = usePathname();
 	
-	const isActive = (path: string) => pathname ? pathname.split("/")[1] === path : false;
-	console.log(`Pathname: ${pathname}, IsActive: ${isActive("/calculus")}`);
-	
+	const isActive = (path: string) => pathname ? pathname.split("/")[1] === path : false;	
 	
 	return (
 		<header className="sticky top-0 z-50 flex justify-between items-center p-4 h-28 bg-pbrown text-white">
