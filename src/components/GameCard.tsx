@@ -26,7 +26,7 @@ const GameCard: React.FC<GameCardProps> = ({
 				<div className="relative flex justify-center items-center mt-2 w-32 h-32">
 					
 					<Starburst
-						className="absolute inset-0 animate-spin-slow"
+						className="absolute inset-0 animate-spin-slow fill-pred"
 						width="100%"
 						height="100%"
 						/>

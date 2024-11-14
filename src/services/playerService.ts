@@ -9,7 +9,7 @@ export async function fetchPlayerByID(id: string) {
 		const player = await response.json();
 		return player;
 	} catch (error) {
-		console.log("Error fetching player:", error);
+		console.error("Error fetching player:", error);
 		throw error;
 	}
 }
@@ -24,7 +24,7 @@ export async function fetchPlayerByName(name: string) {
 			return player;
 		} 
 	} catch (error) {
-		console.log("Error fetching player:", error);
+		console.error("Error fetching player:", error);
 		throw error;
 	}
 }

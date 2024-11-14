@@ -4,6 +4,7 @@ import "@/styles/border.css"
 import "@/styles/text.css"
 import "@/styles/font.css"
 import "./globals.css";
+import Header from "@/components/Header";
 
 // TODO add back turbopack in the dev
 
@@ -19,9 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head />
       <body
         className={`antialiased`}
       >
+        <Header />
         <PlayerProvider>
           {children}
         </PlayerProvider>

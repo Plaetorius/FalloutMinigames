@@ -15,6 +15,7 @@ const config: Config = {
         phyellow: "#FFD07E",
         pdarkblue: "#3E446E",
         pbrown: "#5E4949",
+        pred: "#F7363C",
       },
       fontFamily: {
         AdvertisingScript: ['Advertising Script', 'sans-serif'],
