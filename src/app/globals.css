@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: 'Advertising Script';
-  src: url('/fonts/Advertising Script.ttf') format('truetype');
+  src: url('/fonts/Advertising%20Script.ttf') format('truetype');
   font-weight: 700;
   font-style: bold;
 }
@@ -35,5 +35,5 @@ body {
 }
 
 header {
-  font-family: 'Klinom', 'sans-serif';
+  font-family: 'KLINOM', 'sans-serif';
 }
