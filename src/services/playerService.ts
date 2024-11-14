@@ -1,6 +1,12 @@
 export async function fetchPlayerByID(id: string) {
 	try {
-		const response = await fetch(`/api/player/${id}`);
+		if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
+			console.warn("Skipping fetch during build");
+			return null;
+		}
+
+		const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+		const response = await fetch(`${baseUrl}/api/player/${id}`);
 
 		if (!response.ok) {
 			throw new Error("Failed to fetch player with ID " + id);
@@ -16,7 +22,13 @@ export async function fetchPlayerByID(id: string) {
 
 export async function fetchPlayerByName(name: string) {
 	try {
-		const response = await fetch(`/api/player?name=${encodeURIComponent(name)}`);
+		if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
+			console.warn("Skipping fetch during build");
+			return null;
+		}
+		
+		const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+		const response = await fetch(`${baseUrl}/api/player?name=${encodeURIComponent(name)}`);
 		if (!response.ok) {
 			throw new Error("No player found!");
 		} else {

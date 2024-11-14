@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from "react";
-import { Player } from "@/types/PlayerType";
+import Player from "@/types/PlayerType";
 
 interface PlayerContextType {
 	player: Player;
@@ -13,7 +13,7 @@ const PlayerContext = createContext<PlayerContextType | undefined>(undefined);
 
 export const PlayerProvider = ({ children }: { children: ReactNode }) => {
 	const [player, setPlayer] = useState<Player>({
-		id: "1",
+		id: "7275ab10-83ce-440d-b417-958cf1465c13",
 		name: "Player1",
 		hp: 100,
 		xp: 5,
@@ -21,11 +21,11 @@ export const PlayerProvider = ({ children }: { children: ReactNode }) => {
 	});
 
 	const addHP = (amount: number) => {
-		setPlayer((prevPlayer) => ({ ...prevPlayer, hp: prevPlayer.hp + amount }));
+		setPlayer((prevPlayer: Player) => ({ ...prevPlayer, hp: prevPlayer.hp + amount }));
 	};
 
 	const addCaps = (amount: number) => {
-		setPlayer((prevPlayer) => ({...prevPlayer, caps: prevPlayer.caps + amount }));
+		setPlayer((prevPlayer: Player) => ({...prevPlayer, caps: prevPlayer.caps + amount }));
 	}
 
 	return (
