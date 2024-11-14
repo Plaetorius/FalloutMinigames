@@ -15,8 +15,8 @@
 }
 
 @font-face {
-  font-family: 'KLINOM';
-  src: url('/fonts/KLINOM.ttf') format('truetype');
+  font-family: 'Klinom';
+  src: url('/fonts/Klinom.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -35,5 +35,5 @@ body {
 }
 
 header {
-  font-family: 'KLINOM', 'sans-serif';
+  font-family: 'Klinom', 'sans-serif';
 }

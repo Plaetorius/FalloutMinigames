@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<div className="w-full h-screen bg-white">
 			<header className="w-full h-96 text-[200px] flex justify-center items-center sticky top-0 z-0 text-pyellow">
-					<h1>
+					<h1 className="font-klinom">
 						Fallout Minigames
 					</h1>
 			</header>
