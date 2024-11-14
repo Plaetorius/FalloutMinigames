@@ -16,7 +16,7 @@ const StarburstImage: React.FC<StarburstImageProps> = ({
 	image_alt = "Default Image",
 }) => {
 	return (
-		<div className="relative w-24 h-24 transition-transform transform ease-in hover:scale-110">
+		<div className="relative w-24 h-24 transition-transform transform ease-in hover:scale-120">
 			<Starburst 
 				className={`absolute inset-0 animate-spin-slow fill-${color} z-0`}
 				width="100%"
