@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 /*
-7275ab10-83ce-440d-b417-958cf1465c13
+0b2c0cb7-a5d3-4fe7-9396-7319ac8c4e44
 */
 
 const prisma = new PrismaClient();

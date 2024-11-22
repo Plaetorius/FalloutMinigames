@@ -14,5 +14,6 @@ model Player {
   hp        Int      @default(10)
   xp        Int      @default(0)
   caps      Int      @default(0)
+  photo     String?  @default("icons/mininuke.png")
   createdAt DateTime @default(now())
 }

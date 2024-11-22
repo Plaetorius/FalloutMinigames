@@ -4,6 +4,7 @@ export default interface Player {
 	hp: number;
 	xp: number;
 	caps: number;
+	photo?: string;
 }
 
 // Distinction between Player and Profile, maybe merge later

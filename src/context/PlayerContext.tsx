@@ -13,7 +13,7 @@ const PlayerContext = createContext<PlayerContextType | undefined>(undefined);
 
 export const PlayerProvider = ({ children }: { children: ReactNode }) => {
 	const [player, setPlayer] = useState<Player>({
-		id: "7275ab10-83ce-440d-b417-958cf1465c13",
+		id: "0b2c0cb7-a5d3-4fe7-9396-7319ac8c4e44",
 		name: "Player1",
 		hp: 100,
 		xp: 5,
